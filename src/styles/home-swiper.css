@@ -1,0 +1,17 @@
+
+.ticket__user-image{
+    top: 10px;
+
+}
+
+.swiper-pagination{
+    bottom: 0px!important;
+}
+
+.swiper-pagination-bullet-active{
+    background: #ffc107!important;
+    width: 14px!important;
+    height: 7px!important;
+    border-radius: 10px!important;
+    transition: all 0.3s ease!important;
+}
