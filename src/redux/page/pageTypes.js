@@ -3,3 +3,4 @@ export const NAVPHONE_EXPAND = 'NAVPHONE_EXPAND'
 export const SIDEBAR_EXPAND = 'SIDEBAR_EXPAND'
 export const EXPANDS_CLOSE = 'EXPANDS_CLOSE'
 export const OVERLAY = "OVERLAY"
+export const SET_PAGE_QUERY = "SET_PAGE_QUERY"

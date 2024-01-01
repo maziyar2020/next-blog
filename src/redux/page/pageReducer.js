@@ -3,7 +3,8 @@ import {
     BIO_EXPAND,
     EXPANDS_CLOSE,
     SIDEBAR_EXPAND,
-    OVERLAY
+    OVERLAY,
+    SET_PAGE_QUERY
 
 } from './pageTypes'
 
@@ -11,7 +12,13 @@ const initState = {
     navExpand: false,
     sidebarExpand: false,
     bioExpand: false,
-    overlay : false
+    overlay: false,
+    blogQuery: [
+        { label: 'جدید ترین', name: 'newest' },
+        { label: 'پر بازدیدترین', name: 'most' },
+        { label: 'محبوب ترین', name: 'popular' },
+    ],
+    selectedQuery: 'newest'
 }
 
 export const userPageDataLoader = (state = initState, action) => {
@@ -37,12 +44,17 @@ export const userPageDataLoader = (state = initState, action) => {
                 navExpand: action.payload,
                 sidebarExpand: action.payload,
                 bioExpand: action.payload,
-                overlay : action.payload
+                overlay: action.payload
             }
         case OVERLAY:
             return {
                 ...state,
-                overlay : action.payload
+                overlay: action.payload
+            }
+        case SET_PAGE_QUERY:
+            return {
+                ...state,
+                selectedQuery: action.payload
             }
 
         default:

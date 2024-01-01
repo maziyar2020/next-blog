@@ -3,7 +3,8 @@ import {
     EXPANDS_CLOSE,
     NAVPHONE_EXPAND,
     SIDEBAR_EXPAND,
-    OVERLAY
+    OVERLAY,
+    SET_PAGE_QUERY
 
 } from './pageTypes'
 
@@ -39,6 +40,13 @@ export const closeExpandsHandler = (payload) => {
 export const overlay = (payload) => {
     return {
         type: OVERLAY,
+        payload
+    }
+}
+
+export const setPageQuery = (payload) => {
+    return {
+        type: SET_PAGE_QUERY,
         payload
     }
 }

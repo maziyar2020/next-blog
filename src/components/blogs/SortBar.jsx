@@ -18,8 +18,6 @@ const SortBar = () => {
         router.replace({
             query: { ...router.query, sort: id },
         });
-        
-        console.log(selectedQuery);
     }
 
     return (
